@@ -19,6 +19,8 @@ def validate(text):
     stripped = text.strip()
     if not stripped:
         return False
+    if "\n" in stripped or "\r" in stripped:
+        return False
     return 1 <= len(text) <= 140
 
 
